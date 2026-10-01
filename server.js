@@ -15,7 +15,7 @@ const io = new Server(server);
 
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/mongodb+srv://dhruvilcap_db_user:0KYmJ4PHtewvgD83@cluster0.dpsixk3.mongodb.net/realtime_chat";
+  process.env.MONGODB_URI || "mongodbmongodb://127.0.0.1:27017/mongodb+srv://dhruvilcap_db_user:0KYmJ4PHtewvgD83@cluster0.dpsixk3.mongodb.net/realtime_chat";
 const JWT_SECRET = process.env.JWT_SECRET || "development_secret_change_me";
 
 app.use(express.json());
