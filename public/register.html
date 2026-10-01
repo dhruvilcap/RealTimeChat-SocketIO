@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - RealTime Chat</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <a class="back-link" href="/">← Back</a>
+    <div class="auth-icon">✨</div>
+    <h1>Create account</h1>
+    <p class="muted">Register with email and password for private chat.</p>
+
+    <div id="authMessage" class="message-box hidden"></div>
+
+    <form id="registerForm">
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="Dhruvil" minlength="2" maxlength="40" required>
+
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Minimum 6 characters" minlength="6" required>
+
+      <label for="confirmPassword">Confirm password</label>
+      <input id="confirmPassword" type="password" placeholder="Repeat password" minlength="6" required>
+
+      <button class="btn btn-primary btn-full" type="submit">Create Account</button>
+    </form>
+
+    <p class="auth-footer">
+      Already registered?
+      <a href="/login.html">Login</a>
+    </p>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>

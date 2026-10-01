@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - RealTime Chat</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="chat-body">
+  <div class="chat-app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-small">
+          <div class="brand-icon">💬</div>
+          <div>
+            <h2>Messages</h2>
+            <span id="myStatus">Connecting...</span>
+          </div>
+        </div>
+        <button id="mobileClose" class="icon-btn mobile-only" title="Close">×</button>
+      </div>
+
+      <div class="my-profile" id="myProfile"></div>
+
+      <div class="search-box">
+        <span>⌕</span>
+        <input id="userSearch" type="text" placeholder="Search people...">
+      </div>
+
+      <div class="chat-list">
+        <button class="chat-list-item active" id="groupChatItem">
+          <div class="avatar group-avatar">👥</div>
+          <div class="chat-item-text">
+            <strong>Group Broadcast</strong>
+            <span>Everyone can join</span>
+          </div>
+          <span class="online-dot"></span>
+        </button>
+
+        <div class="section-title">DIRECT MESSAGES</div>
+        <div id="usersList"></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button id="logoutBtn" class="logout-btn">↪ Logout</button>
+      </div>
+    </aside>
+
+    <main class="conversation">
+      <header class="conversation-header">
+        <button id="mobileMenu" class="icon-btn mobile-only" title="Menu">☰</button>
+
+        <div class="conversation-avatar" id="conversationAvatar">👥</div>
+        <div class="conversation-info">
+          <h2 id="conversationTitle">Group Broadcast</h2>
+          <span id="conversationStatus">All connected users</span>
+        </div>
+
+        <div class="header-actions">
+          <span class="connection-status" id="connectionStatus">
+            <i></i> Connected
+          </span>
+        </div>
+      </header>
+
+      <section class="messages-area" id="messagesArea">
+        <div class="welcome-chat" id="welcomeChat">
+          <div class="welcome-icon">👋</div>
+          <h3>Welcome to the conversation</h3>
+          <p>Select a chat and start sending messages.</p>
+        </div>
+      </section>
+
+      <div class="typing-area" id="typingArea"></div>
+
+      <form class="message-form" id="messageForm">
+        <button type="button" class="emoji-btn" id="emojiBtn" title="Add emoji">😊</button>
+        <input id="messageInput" autocomplete="off" maxlength="2000" placeholder="Write a message..." disabled>
+        <button class="send-btn" type="submit" title="Send" disabled>➤</button>
+      </form>
+
+      <div class="emoji-panel hidden" id="emojiPanel">
+        <button type="button">😀</button>
+        <button type="button">😂</button>
+        <button type="button">😍</button>
+        <button type="button">👍</button>
+        <button type="button">❤️</button>
+        <button type="button">🎉</button>
+        <button type="button">🔥</button>
+        <button type="button">😊</button>
+        <button type="button">😎</button>
+        <button type="button">🙏</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/private-chat.js"></script>
+</body>
+</html>

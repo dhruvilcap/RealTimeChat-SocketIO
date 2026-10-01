@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - RealTime Chat</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-body">
+  <div class="auth-card">
+    <a class="back-link" href="/">← Back</a>
+    <div class="auth-icon">🔐</div>
+    <h1>Welcome back</h1>
+    <p class="muted">Login to start a personal conversation.</p>
+
+    <div id="authMessage" class="message-box hidden"></div>
+
+    <form id="loginForm">
+      <label for="email">Email address</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="••••••••" required>
+
+      <button class="btn btn-primary btn-full" type="submit">Login</button>
+    </form>
+
+    <p class="auth-footer">
+      Don't have an account?
+      <a href="/register.html">Create one</a>
+    </p>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
